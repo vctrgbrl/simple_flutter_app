@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:the_project/home_page.dart';
-import 'package:the_project/loading_page.dart';
-import 'package:the_project/person_page.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:the_project/app/routes/pages.dart';
+import 'package:the_project/app/routes/routes.dart';
 
 void main() {
-  runApp(MaterialApp(
-    routes: {
-      '/': (context) => LoadingPage(),
-      '/home': (context) => HomePage()
-    },
+  runApp(GetMaterialApp(
+    initialRoute: Routes.INITIAL,
+    getPages: Pages.routes,
   ));
 }
